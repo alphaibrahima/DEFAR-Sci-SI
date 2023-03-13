@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\EntretienController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('create');
 });
+
+Route::resource('entretiens', EntretienController::class);
