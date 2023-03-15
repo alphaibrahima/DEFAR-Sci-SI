@@ -15,9 +15,9 @@ use App\Http\Controllers\EntretienController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::resource('entretiens', EntretienController::class);
 Route::get('/', function () {
     return view('create');
 });
 
-Route::resource('entretiens', EntretienController::class);
+
