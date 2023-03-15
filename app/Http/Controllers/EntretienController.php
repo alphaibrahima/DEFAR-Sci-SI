@@ -109,6 +109,11 @@ class EntretienController extends Controller
         return view('edit', compact('entretien'));
     }
 
+    public function search()
+    {
+        
+    }
+
     /**
      * Update the specified resource in storage.
      *

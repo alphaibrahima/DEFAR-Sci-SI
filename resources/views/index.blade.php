@@ -17,7 +17,7 @@
       {{ session()->get('success') }}
     </div><br />
   @endif
-
+@include('partials.search')
   <table class="table table-striped">
 
     <thead>
@@ -46,7 +46,7 @@
                 <form action="{{ route('entretiens.destroy', $entretien->id)}}" method="post">
                   @csrf
                   @method('DELETE')
-                  <button class="btn btn-danger" type="submit">Delete</button>
+                  <button  class="btn btn-danger" type="submit">Delete</button>
                 </form>
             </td>
         </tr>
