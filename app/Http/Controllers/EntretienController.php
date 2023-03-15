@@ -111,8 +111,16 @@ class EntretienController extends Controller
 
     public function search()
     {
-        
-    }
+        $entretiens = request()->input('entretiens');
+
+    $entretiens  =   Entretien::where('prenom', 'like', "%$entretiens%")
+
+            ->orWhere('nom', 'like', "%$entretiens")
+            ->get();
+
+            return view('search1')->with('entretiens', $entretiens);
+
+  }
 
     /**
      * Update the specified resource in storage.

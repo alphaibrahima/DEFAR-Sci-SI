@@ -17,7 +17,14 @@ use App\Http\Controllers\EntretienController;
 */
 Route::resource('entretiens', EntretienController::class);
 
-Route::get('/search', 'EntretienController@search')->name('index.search');
+Route::get('/search', [EntretienController::class, 'search'])->name('index.search');
+
 Route::get('/', function () {
     return view('create');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
