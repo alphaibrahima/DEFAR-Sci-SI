@@ -19,5 +19,3 @@ Route::resource('entretiens', EntretienController::class);
 Route::get('/', function () {
     return view('create');
 });
-
-
