@@ -39,6 +39,11 @@ class CreateEntretiensTable extends Migration
             $table->string('informations_supplementaires');
             $table->timestamps();
         });
+
+
+          DB::statement(
+            'ALTER TABLE entretiens ADD FULLTEXT fulltext_index(nom, prenom, email)'
+        );
     }
 
     /**

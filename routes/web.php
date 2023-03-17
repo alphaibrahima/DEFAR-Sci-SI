@@ -16,6 +16,9 @@ use App\Http\Controllers\EntretienController;
 |
 */
 Route::resource('entretiens', EntretienController::class);
+
+Route::get('/search', [EntretienController::class, 'search'])->name('index.search');
+
 Route::get('/', function () {
     return view('create');
 });
