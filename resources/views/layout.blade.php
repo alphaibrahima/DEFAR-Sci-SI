@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Table Entretiens</title>
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />    
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
@@ -99,21 +100,26 @@ grid-column-end: 3;
     height: 35px;
     width: 60%;
   }
-  button{
+ button{
     background-color: #84addb;
     color: white;
     min-width: 20px;
     padding: 12px 20px;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
+   
   }
   button[type=button] {
     float: right;
+background-color: #84addb;
+
   }
-  button[type="submit"] {
+  button[id="bouton"] {
     float: right;
+background-color: #84addb;
+
   }
+
 
 
 

@@ -8,8 +8,8 @@
   }
 </style>
 
-<div class="card uper">
-  <div class="card-header">
+<div >
+  <div >
     Ajouter un Entretien
   </div>
 
@@ -119,7 +119,7 @@
                    Non
                 </label>
             </div>
-            
+
 
             </div>
 

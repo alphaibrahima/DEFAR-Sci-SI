@@ -25,9 +25,9 @@
           <td>ID</td>
           <td>Nom</td>
           <td>Prenom</td>
-          <td >Show</td>
-          <td>Edit</td>
-          <td>Delete</td>
+          <td >Montrer</td>
+          <td>Modifier</td>
+          <td>Supprimer</td>
         </tr>
     </thead>
 
@@ -38,15 +38,15 @@
       <td>{{ $entretien->nom}}</td>
       <td>{{ $entretien->prenom}}</td>
 
-            <td><a href="{{ route('entretiens.show', $entretien->id)}}" class="btn btn-info">Show</a></td>
+            <td><a href="{{ route('entretiens.show', $entretien->id)}}" class="btn btn-success"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
 
-             <td><a href="{{ route('entretiens.edit', $entretien->id)}}" class="btn btn-primary" >Edit</a></td>
+             <td><a href="{{ route('entretiens.edit', $entretien->id)}}" class="btn btn-primary" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
 
             <td>
                 <form action="{{ route('entretiens.destroy', $entretien->id)}}" method="post">
                   @csrf
                   @method('DELETE')
-                  <button  class="btn btn-danger" type="submit">Delete</button>
+                  <button  class="btn btn-danger" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 </form>
             </td>
         </tr>
