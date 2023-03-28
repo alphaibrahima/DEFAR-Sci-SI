@@ -1,11 +1,16 @@
 
- @extends('layout')
+
+
+@extends('layout')
 
 @section('content')
+
 <style>
   .uper {
     margin-top: 40px;
   }
+
+
 </style>
 
 <div class="card uper">
@@ -119,7 +124,7 @@
                    Non
                 </label>
             </div>
-            
+
 
             </div>
 
@@ -184,6 +189,8 @@
 </section>
   </body>
 </html>
+
+
 <script>
     var checkbox = document.getElementById("yesno");
     var textarea = document.getElementById("explanation");
@@ -198,3 +205,4 @@
     </script>
 
     @endsection
+

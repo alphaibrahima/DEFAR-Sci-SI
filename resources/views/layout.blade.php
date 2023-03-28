@@ -109,10 +109,12 @@ button {
 
 button[type=button] {
     float: right;
+    background-color: #84addb;
 }
 
 button[type="submit"] {
     float: right;
+    background-color: #84addb;
 }
 
 
@@ -161,7 +163,7 @@ button[type="submit"] {
 </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
- 
+
 
 
 </body>

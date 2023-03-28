@@ -17,7 +17,7 @@ use App\Http\Controllers\EntretienController;
 */
 Route::resource('entretiens', EntretienController::class);
 Route::get('/', function () {
-    return view('create');
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
