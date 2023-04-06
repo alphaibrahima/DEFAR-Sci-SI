@@ -133,22 +133,20 @@ class EntretienController extends Controller
   }
 
 
-
-  public function entretien_pdf()
-  {
-    $entretiens = Entretien::all();
-    
+  public function export_entretien_pdf(){
 
 
-    $pdf = PDF::loadView('show', compact('entretiens'));
-
-    return $pdf->download('show.pdf',compact('entretiens'))->setOptions(['defaultFont' => 'sans-serif']);
-
-    
-
-
-    
+    $entretiens = Entretien::find(27 );
+        $pdf = PDF::loadView('entretien', ['entretien'=>$entretiens]);
+        return $pdf->download('entretien.pdf');
   }
+
+
+    
+
+
+    
+  
 
     /**
      * Update the specified resource in storage.

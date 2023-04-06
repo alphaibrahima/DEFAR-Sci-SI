@@ -29,7 +29,8 @@
           <td >Montrer</td>
           <td>Modifier</td>
           <td>Supprimer</td>
-           <td>Telecharger</td>
+          <td>Telecharger</td>
+           
 
         </tr>
     </thead>
@@ -55,10 +56,15 @@
                 </form>
             </td>
 
-             <td>
-                <a   href="{{route('show.pdf',$entretien->id)}}" class="btn btn-warning w-9 h-8"  style=" margin-top:20%" ><i class="fa fa-upload" aria-hidden="true"></i></a>
-            
+
+            <td>
+                 <a class="btn btn-warning w-9 h-8" style=" margin-top:20%"  href="{{ route('entretien.pdf') }}"> <i class="fa fa-download" aria-hidden="true"></i> </a>
+                
             </td>
+             
+    
+            
+         
 
 
 
