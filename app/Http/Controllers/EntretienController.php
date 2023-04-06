@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Entretien;
 use Illuminate\Http\Request;
+use PDF;
+
+
 
 class EntretienController extends Controller
 {
@@ -17,11 +20,6 @@ class EntretienController extends Controller
         $entretiens = Entretien::all();
 
     return view('index', compact('entretiens'));
-
-        $entretiens = Entretien::all();
-
-
-        return view('index', compact('entretiens'));
 
     }
 
@@ -122,6 +120,36 @@ class EntretienController extends Controller
 
   }
 
+  public function dev()
+    {
+       // $entretiens = request()->input('entretiens');
+
+    $entretiens  =   Entretien::where('domaine','Developpemnt Web')
+
+            ->get();
+
+            return view('dev1', compact('entretiens'));
+
+  }
+
+
+
+  public function entretien_pdf()
+  {
+    $entretiens = Entretien::all();
+    
+
+
+    $pdf = PDF::loadView('show', compact('entretiens'));
+
+    return $pdf->download('show.pdf',compact('entretiens'))->setOptions(['defaultFont' => 'sans-serif']);
+
+    
+
+
+    
+  }
+
     /**
      * Update the specified resource in storage.
      *
@@ -180,4 +208,6 @@ class EntretienController extends Controller
 
     return redirect('/entretiens')->with('success', 'Entretien supprimer avec succèss');
     }
+
+   
 }

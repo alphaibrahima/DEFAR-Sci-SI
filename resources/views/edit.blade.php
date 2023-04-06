@@ -25,9 +25,8 @@
                 </div><br />
             @endif
 
-            <a href="{{ route('entretiens.edit', $entretien->id) }}" class="btn btn-primary"></a>
+            <a href="{{ route('entretiens.edit', $entretien->id) }}" ></a>
 
-            <h3>Edit Entretien</h3>
 
             <form method="POST" action="{{ route('entretiens.update', $entretien->id) }}" enctype="multipart/form-data">
 

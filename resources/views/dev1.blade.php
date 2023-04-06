@@ -11,14 +11,12 @@
 </style>
 
 <div class="uper">
-    @include('partials.dev')
 
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}
     </div><br />
   @endif
-@include('partials.search')
   <table class="table table-striped">
 
     <thead>
@@ -29,8 +27,6 @@
           <td >Montrer</td>
           <td>Modifier</td>
           <td>Supprimer</td>
-           <td>Telecharger</td>
-
         </tr>
     </thead>
 
@@ -40,8 +36,6 @@
              <td>{{ $entretien->id }}</td>
       <td>{{ $entretien->nom}}</td>
       <td>{{ $entretien->prenom}}</td>
-
-
 
             <td><a href="{{ route('entretiens.show', $entretien->id)}}" class="btn btn-success w-9 h-8" style=" margin-top:20%"><i class="fa fa-eye " aria-hidden="true"></i></a></td>
 
@@ -54,15 +48,6 @@
                   <button  class="btn btn-danger w-9 h-8" style=" margin-top:20%" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 </form>
             </td>
-
-             <td>
-                <a   href="{{route('show.pdf',$entretien->id)}}" class="btn btn-warning w-9 h-8"  style=" margin-top:20%" ><i class="fa fa-upload" aria-hidden="true"></i></a>
-            
-            </td>
-
-
-
-
         </tr>
         @endforeach
     </tbody>

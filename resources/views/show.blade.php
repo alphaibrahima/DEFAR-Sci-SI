@@ -10,6 +10,7 @@
     <title></title>
   </head>
   <body>
+           
     <style>
 
         *{
@@ -42,7 +43,7 @@ h3{
    font-size: 25px;
    padding-top: 15px;
    margin-top: 8px;
-   margin-left: 345px;
+   margin-left: 250px;
 }
 
 .liste{
@@ -67,10 +68,12 @@ a{
 }
     </style>
 
+
+
     <div class="container">
 
      <div class="header">
-        <h3>Entretien Details</h3><br>
+        <h3>{{ $entretien->prenom }}&nbsp&nbsp {{ $entretien->nom }}</h3><br>
     </div><br>
     <div class="form">
 
@@ -87,7 +90,7 @@ a{
     <p><b class="lbl">Mois de formation:</b>{{ $entretien->mois_de_formation}}</p><br>
     <p><b class="lbl">Modalite paiement :</b>{{ $entretien->modalite_paiement }}</p><br>
     <p><b class="lbl">Informations supplementaires :</b>{{ $entretien->informations_supplementaires}}</p><br>
-        
+
   </div>
 
   <div class="section2">
@@ -102,15 +105,15 @@ a{
     <p><b class="lbl">Objectifs dans 2ans :</b>{{ $entretien->objectifs_dans_2ans}}</p><br>
     <p><b class="lbl">Demarrage :</b>{{ $entretien->demarrage }}</p><br>
     <p><b class="lbl">Number en cas d'urgence:</b>{{ $entretien->number_en_cas_d_urgence}}</p><br>
-   
+
 
   </div>
-           
-            
-        
-          
+
+       @include('partials.download')
+
+
+
     </div>
 
   </body>
   </html>
-  

@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EntretienController;
 
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +20,11 @@ use App\Http\Controllers\EntretienController;
 Route::resource('entretiens', EntretienController::class);
 
 Route::get('/search', [EntretienController::class, 'search'])->name('index.search');
+
+Route::get('/dev', [EntretienController::class, 'dev'])->name('index.dev');
+
+Route::get('entretien_pdf',[EntretienController::class, 'entretien_pdf'])->name('show.pdf');
+
 
 Route::get('/', function () {
     return view('create');
